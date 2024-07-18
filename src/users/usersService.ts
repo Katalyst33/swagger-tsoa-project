@@ -6,6 +6,9 @@ export type UserCreationParams = Pick<User, "email" | "name" | "phoneNumbers">;
 
 export class UsersService {
     public get(id: number, name?: string): User {
+
+        debugger;
+        console.log("rreal time update hello");
         return {
             id,
             email: "jane@doe.com",

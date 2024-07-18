@@ -1,5 +1,6 @@
 {
-  "exec": "ts-node src/server.ts",
-  "watch": ["src"],
+  "watch": ["src/**/*.ts"],
+  "ignore": ["src/**/*.spec.ts", "build/**/*"],
+  "exec": "npm run build && node build/src/server.js",
   "ext": "ts"
 }

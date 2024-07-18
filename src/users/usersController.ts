@@ -8,9 +8,8 @@ export class UsersController extends Controller {
     @Get("{userId}")
     public async getUser(
         @Path() userId: number,
-        @Query() name?: string
     ): Promise<User> {
-        return new UsersService().get(userId, name);
+        return new UsersService().get(userId);
     }
 
     @SuccessResponse("201", "Created") // Custom success response
@@ -19,7 +18,6 @@ export class UsersController extends Controller {
         @Body() requestBody: UserCreationParams
     ): Promise<void> {
 
-        console.log("remote address: ");
         this.setStatus(201); // set return status 201
         new UsersService().create(requestBody);
         return;
