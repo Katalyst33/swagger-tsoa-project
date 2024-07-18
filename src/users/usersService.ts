@@ -1,5 +1,5 @@
 // src/users/usersService.ts
-import { User } from "./user";
+import {User} from "./user";
 
 // A post request should not contain an id.
 export type UserCreationParams = Pick<User, "email" | "name" | "phoneNumbers">;
